@@ -1,5 +1,5 @@
 {
-  "name": "todo-sort",
+  "name": "obsidian-todos-sort",
   "version": "1.0.0",
   "description": "A plugin for Obsidian (https://obsidian.md) that sorts todos by completion status.",
   "main": "main.js",

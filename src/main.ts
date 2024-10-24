@@ -1,69 +1,60 @@
-import { debounce, Editor, MarkdownView, Plugin } from "obsidian";
-import { DEFAULT_SETTINGS, Settings, SettingsTab } from "./settings";
-import { sortTodos } from "./sort";
+import { Editor, MarkdownView, Plugin, TFile } from 'obsidian'
+import { DEFAULT_SETTINGS, Settings, SettingsTab } from './settings'
+import { sortTodos } from './sort'
 
 export default class MyPlugin extends Plugin {
-  settings: Settings;
-  _debouncedSortTodos: (editor: Editor) => void;
+  settings: Settings
+  _debouncedSortTodos: (editor: Editor) => void
 
   async onload() {
-    await this.loadSettings();
-    this._updateDebounce();
-    this.addSettingTab(new SettingsTab(this.app, this));
+    await this.loadSettings()
+    this.addSettingTab(new SettingsTab(this.app, this))
     this.registerEvent(
-      this.app.workspace.on("editor-change", this._onEditorChange)
-    );
+      this.app.workspace.on('file-open', (file: TFile) => {
+        if (file instanceof TFile) {
+          const activeLeaf = this.app.workspace.activeLeaf
+          if (activeLeaf && activeLeaf.view instanceof MarkdownView) {
+            this._onEditorChange(activeLeaf.view.editor)
+          }
+        }
+      }),
+    )
   }
 
   onunload() {}
 
   async loadSettings() {
-    this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+    this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData())
   }
 
   async saveSettings() {
-    await this.saveData(this.settings);
-    this._updateDebounce();
+    await this.saveData(this.settings)
   }
 
-  _onEditorChange = (editor: Editor, _markdownView: MarkdownView) => {
-    this._debouncedSortTodos(editor);
-  };
+  _onEditorChange = (editor: Editor) => {
+    this._sortTodos(editor)
+  }
 
-  _lastSort = new Date();
-  _lastValue = "";
+  _lastSort = new Date()
+  _lastValue = ''
   _sortTodos = (editor: Editor) => {
-    const began = new Date();
-    const value = editor.getValue();
+    const began = new Date()
+    const value = editor.getValue()
     if (value === this._lastValue) {
-      return;
+      return
     }
     if (new Date().getTime() - this._lastSort.getTime() < 100) {
-      console.error("WARNING!!! Possible infinite sort detected");
-      return;
+      console.error('WARNING!!! Possible infinite sort detected')
+      return
     }
-    const cursor = editor.getCursor();
-    const lineNumber = cursor.line;
-    const result = sortTodos(value, this.settings.sortOrder);
-    if (result.output !== value) {
-      const now = new Date();
-      console.log(`Sorted todos in ${now.getTime() - began.getTime()}ms`);
-      this._lastSort = now;
-      this._lastValue = result.output;
-      editor.setValue(result.output);
-      const newLine = result.lineMap[lineNumber];
-      editor.setCursor({
-        line: newLine,
-        ch: cursor.ch,
-      });
-    }
-  };
 
-  _updateDebounce = () => {
-    this._debouncedSortTodos = debounce(
-      this._sortTodos,
-      this.settings.delayMs,
-      true
-    );
-  };
+    const result = sortTodos(value, this.settings.sortOrder)
+    if (result.output !== value) {
+      const now = new Date()
+      console.log(`Sorted todos in ${now.getTime() - began.getTime()}ms`)
+      this._lastSort = now
+      this._lastValue = result.output
+      editor.setValue(result.output)
+    }
+  }
 }
