@@ -27,12 +27,6 @@ Once installed and enabled, the plugin will automatically sort todos in your not
    - **Completed at top**: Completed tasks will appear at the top of the list.
    - **Completed at bottom**: Completed tasks will appear at the bottom of the list.
 
-## Configuration
-
-The plugin settings can be accessed and modified through the Obsidian settings interface. The available options include:
-
-- **Sort Order**: Determines the position of completed tasks in your todo list.
-
 ## Development
 
 To contribute to the development of this plugin, follow these steps:
