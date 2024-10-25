@@ -1,10 +1,10 @@
 {
   "id": "obsidian-todos-sort",
   "name": "Todos sort",
+  "description": "A plugin for Obsidian that sorts todos by completion status.",
+  "author": "jsifalda",
   "version": "2.0.0",
   "minAppVersion": "0.15.0",
-  "description": "A plugin for Obsidian (https://obsidian.md) that sorts todos by completion status.",
-  "author": "@jsifalda",
   "authorUrl": "https://github.com/jsifalda",
   "isDesktopOnly": false
 }
