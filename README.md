@@ -50,7 +50,7 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 
 ## Acknowledgments
 
-- Developed by Jiri Sifalda (forked version of [Ryan Gomba](https://github.com/ryangomba/obsidian-todo-sort))
+- Developed by [@jsifalda](https://dub.sh/I5tFaqk) (forked version of [Ryan Gomba](https://github.com/ryangomba/obsidian-todo-sort))
 - Inspired by the need for better task management within Obsidian notes.
 
 For more information, visit the [GitHub repository](https://github.com/jsifalda/obsidian-todos-sort).
