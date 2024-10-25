@@ -1,7 +1,7 @@
 {
-  "id": "obsidian-todos-sort",
+  "id": "todos-sort",
   "name": "Todos sort",
-  "description": "A plugin for Obsidian that sorts todos by completion status.",
+  "description": "A plugin that sorts todos in current note by completion status.",
   "author": "Jiri Sifalda",
   "version": "2.0.0",
   "minAppVersion": "0.15.0",
