@@ -1,4 +1,4 @@
-import { Editor, MarkdownView, Plugin, TFile } from 'obsidian'
+import { debounce, Editor, MarkdownView, Plugin, TFile } from 'obsidian'
 import { DEFAULT_SETTINGS, Settings, SettingsTab } from './settings'
 import { sortTodos } from './sort'
 
@@ -47,7 +47,8 @@ export default class MyPlugin extends Plugin {
       console.error('WARNING!!! Possible infinite sort detected')
       return
     }
-
+    const cursor = editor.getCursor()
+    const lineNumber = cursor.line
     const result = sortTodos(value, this.settings.sortOrder)
     if (result.output !== value) {
       const now = new Date()
@@ -55,6 +56,11 @@ export default class MyPlugin extends Plugin {
       this._lastSort = now
       this._lastValue = result.output
       editor.setValue(result.output)
+      const newLine = result.lineMap[lineNumber]
+      editor.setCursor({
+        line: newLine,
+        ch: cursor.ch,
+      })
     }
   }
 }
