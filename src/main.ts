@@ -1,14 +1,14 @@
-import { debounce, Editor, MarkdownView, Plugin, TFile } from 'obsidian'
-import { DEFAULT_SETTINGS, Settings, SettingsTab } from './settings'
+import { Editor, MarkdownView, Plugin, TFile } from 'obsidian'
+import { DEFAULT_SETTINGS, TodoSorterSettings, TodoSorterSettingsTab } from './settings'
 import { sortTodos } from './sort'
 
-export default class MyPlugin extends Plugin {
-  settings: Settings
+export default class TodoSorterPlugin extends Plugin {
+  settings: TodoSorterSettings
   _debouncedSortTodos: (editor: Editor) => void
 
   async onload() {
     await this.loadSettings()
-    this.addSettingTab(new SettingsTab(this.app, this))
+    this.addSettingTab(new TodoSorterSettingsTab(this.app, this))
     this.registerEvent(
       this.app.workspace.on('file-open', (file: TFile) => {
         if (file instanceof TFile) {

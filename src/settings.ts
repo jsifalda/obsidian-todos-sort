@@ -2,15 +2,15 @@ import { App, PluginSettingTab, Setting } from 'obsidian'
 import Plugin from './main'
 import { SortOrder } from './sort'
 
-export interface Settings {
+export interface TodoSorterSettings {
   sortOrder: SortOrder
 }
 
-export const DEFAULT_SETTINGS: Settings = {
+export const DEFAULT_SETTINGS: TodoSorterSettings = {
   sortOrder: SortOrder.COMPLETED_TOP,
 }
 
-export class SettingsTab extends PluginSettingTab {
+export class TodoSorterSettingsTab extends PluginSettingTab {
   plugin: Plugin
 
   constructor(app: App, plugin: Plugin) {
