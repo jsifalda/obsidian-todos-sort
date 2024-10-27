@@ -10,7 +10,7 @@
     "version": "node version-bump.mjs && git add manifest.json versions.json"
   },
   "keywords": [],
-  "author": "Ryan Gomba",
+  "author": "@jsifalda",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.19.6",
