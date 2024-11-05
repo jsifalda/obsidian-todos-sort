@@ -1,4 +1,4 @@
-# Obsidian Todos Sort Plugin
+# Todos Sort Plugin
 
 _A plugin for [Obsidian](https://obsidian.md) that sorts todos by completion status within a note._
 

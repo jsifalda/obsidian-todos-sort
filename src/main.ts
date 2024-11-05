@@ -12,9 +12,9 @@ export default class TodoSorterPlugin extends Plugin {
     this.registerEvent(
       this.app.workspace.on('file-open', (file: TFile) => {
         if (file instanceof TFile) {
-          const activeLeaf = this.app.workspace.activeLeaf
-          if (activeLeaf && activeLeaf.view instanceof MarkdownView) {
-            this._onEditorChange(activeLeaf.view.editor)
+          const view = this.app.workspace.getActiveViewOfType(MarkdownView)
+          if (view && view instanceof MarkdownView) {
+            this._onEditorChange(view.editor)
           }
         }
       }),
@@ -52,7 +52,6 @@ export default class TodoSorterPlugin extends Plugin {
     const result = sortTodos(value, this.settings.sortOrder)
     if (result.output !== value) {
       const now = new Date()
-      console.log(`Sorted todos in ${now.getTime() - began.getTime()}ms`)
       this._lastSort = now
       this._lastValue = result.output
       editor.setValue(result.output)

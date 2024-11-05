@@ -21,7 +21,6 @@ export class TodoSorterSettingsTab extends PluginSettingTab {
   display(): void {
     const { containerEl } = this
     containerEl.empty()
-    containerEl.createEl('h1', { text: 'Todo sort' })
     new Setting(containerEl).setName('Sort order').addDropdown((dropdown) =>
       dropdown
         .addOption(SortOrder.COMPLETED_TOP, 'Completed at top')
