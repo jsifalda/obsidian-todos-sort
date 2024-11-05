@@ -3,7 +3,7 @@
   "name": "Todos sort",
   "description": "Sorting your TODOs (checkboxes) in current note by completion status.",
   "author": "Jiri Sifalda (originally by Ryan Gomba)",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "minAppVersion": "0.15.0",
   "authorUrl": "https://github.com/jsifalda",
   "isDesktopOnly": false
