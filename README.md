@@ -4,6 +4,8 @@ _A plugin for [Obsidian](https://obsidian.md) that sorts todos by completion sta
 
 **Ever wanted to sort your todos by completion status when you open a note? Well, this Obsidian plugin is here to help you! This plugin automatically sorts todos in your notes based on their completion status, making it easier to manage and prioritise your tasks (only on file open - not for every single note edit)**
 
+![demo](https://www.dropbox.com/scl/fi/lwl5673dok9d4qd954lj5/obsidian-todos-sorter.mov?rlkey=luou179rcu7j1lm4qhf5hm6zu&dl=1)
+
 ## Features
 
 - **Automatic Sorting**: Automatically sorts todos in your notes whenever a file is opened.
