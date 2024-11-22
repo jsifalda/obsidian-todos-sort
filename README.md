@@ -52,11 +52,19 @@ To release a new version of the plugin:
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
+## Support the Project
+
+If you find this plugin valuable, consider supporting its development, because it helps me a lot!
+
+<a href="https://www.buymeacoffee.com/jsifalda" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+Follow me on X/Twitter [@jsifalda](https://dub.sh/I5tFaqk) for updates and announcements!
+Your support helps maintain and improve this plugin. Every contribution is appreciated and makes a difference. Thank you for your support!
+
 ## Acknowledgments
 
 - Developed by [@jsifalda](https://dub.sh/I5tFaqk) (forked version of [Ryan Gomba](https://github.com/ryangomba/obsidian-todo-sort))
 - Inspired by the need for better task management within Obsidian notes.
 
-<a href="https://www.buymeacoffee.com/jsifalda" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+---
 
 [![wakatime](https://wakatime.com/badge/user/15205825-ea5c-4bdc-94ae-b2f25e876c76/project/797cd96f-afab-4338-806d-5b0e2905733f.svg)](https://wakatime.com/badge/user/15205825-ea5c-4bdc-94ae-b2f25e876c76/project/797cd96f-afab-4338-806d-5b0e2905733f)
