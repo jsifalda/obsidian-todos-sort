@@ -57,6 +57,6 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 - Developed by [@jsifalda](https://dub.sh/I5tFaqk) (forked version of [Ryan Gomba](https://github.com/ryangomba/obsidian-todo-sort))
 - Inspired by the need for better task management within Obsidian notes.
 
-For more information, visit the [GitHub repository](https://github.com/jsifalda/obsidian-todos-sort).
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="jsifalda" data-color="#FFDD00" data-emoji="☕"  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
 
 [![wakatime](https://wakatime.com/badge/user/15205825-ea5c-4bdc-94ae-b2f25e876c76/project/797cd96f-afab-4338-806d-5b0e2905733f.svg)](https://wakatime.com/badge/user/15205825-ea5c-4bdc-94ae-b2f25e876c76/project/797cd96f-afab-4338-806d-5b0e2905733f)
