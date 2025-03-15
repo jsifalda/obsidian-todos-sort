@@ -56,7 +56,7 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 
 If you find this plugin valuable, consider supporting its development, because it helps me a lot!
 
-<a href="https://www.buymeacoffee.com/jsifalda" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://jsifalda.link/59DgNi0" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 Follow me on X/Twitter [@jsifalda](https://dub.sh/I5tFaqk) for updates and announcements!
 Your support helps maintain and improve this plugin. Every contribution is appreciated and makes a difference. Thank you for your support!
