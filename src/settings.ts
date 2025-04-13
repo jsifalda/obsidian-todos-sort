@@ -31,5 +31,14 @@ export class TodoSorterSettingsTab extends PluginSettingTab {
           await this.plugin.saveSettings()
         }),
     )
+
+    new Setting(containerEl)
+      .setName('Support project ❤️')
+      .setDesc('If you like this plugin, please consider supporting it! So, you can get even more features!')
+      .addButton((button) =>
+        button.setButtonText('Buy me a coffee ☕').onClick(() => {
+          window.open('https://jsifalda.link/ZOg9RzW', '_blank')
+        }),
+      )
   }
 }
