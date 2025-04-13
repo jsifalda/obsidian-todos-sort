@@ -6,19 +6,35 @@ export default class TodoSorterPlugin extends Plugin {
   settings: TodoSorterSettings
   _debouncedSortTodos: (editor: Editor) => void
 
+  private _previousEditor: Editor | undefined
+
   async onload() {
     await this.loadSettings()
     this.addSettingTab(new TodoSorterSettingsTab(this.app, this))
+
     this.registerEvent(
-      this.app.workspace.on('file-open', (file: TFile) => {
-        if (file instanceof TFile) {
-          const view = this.app.workspace.getActiveViewOfType(MarkdownView)
-          if (view && view instanceof MarkdownView) {
-            this._onEditorChange(view.editor)
+      // this.app.workspace.on('active-leaf-change', (leaf: WorkspaceLeaf) => {
+      this.app.workspace.on('active-leaf-change', () => {
+        const view = this.app.workspace.getActiveViewOfType(MarkdownView)
+        if (view && view instanceof MarkdownView) {
+          if (this._previousEditor) {
+            this._sortTodos(this._previousEditor)
           }
+          this._previousEditor = view.editor
         }
       }),
     )
+
+    // this.registerEvent(
+    //   this.app.workspace.on('file-open', (file: TFile) => {
+    //     if (file instanceof TFile) {
+    //       const view = this.app.workspace.getActiveViewOfType(MarkdownView)
+    //       if (view && view instanceof MarkdownView) {
+    //         this._sortTodos(view.editor)
+    //       }
+    //     }
+    //   }),
+    // )
   }
 
   onunload() {}
@@ -31,22 +47,19 @@ export default class TodoSorterPlugin extends Plugin {
     await this.saveData(this.settings)
   }
 
-  _onEditorChange = (editor: Editor) => {
-    this._sortTodos(editor)
-  }
-
   _lastSort = new Date()
   _lastValue = ''
   _sortTodos = (editor: Editor) => {
-    const began = new Date()
     const value = editor.getValue()
     if (value === this._lastValue) {
       return
     }
+
     if (new Date().getTime() - this._lastSort.getTime() < 100) {
       console.error('WARNING!!! Possible infinite sort detected')
       return
     }
+
     const cursor = editor.getCursor()
     const lineNumber = cursor.line
     const result = sortTodos(value, this.settings.sortOrder)
