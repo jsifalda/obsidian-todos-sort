@@ -69,3 +69,5 @@ Your support helps maintain and improve this plugin. Every contribution is appre
 ---
 
 [![wakatime](https://wakatime.com/badge/user/15205825-ea5c-4bdc-94ae-b2f25e876c76/project/797cd96f-afab-4338-806d-5b0e2905733f.svg)](https://wakatime.com/badge/user/15205825-ea5c-4bdc-94ae-b2f25e876c76/project/797cd96f-afab-4338-806d-5b0e2905733f)
+
+![Google Analytics](https://www.google-analytics.com/collect?v=1&tid=G-PCMG85X59S&cid=1&t=pageview&dp=/readme)
