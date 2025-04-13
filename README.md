@@ -69,3 +69,5 @@ Your support helps maintain and improve this plugin. Every contribution is appre
 ---
 
 [![wakatime](https://wakatime.com/badge/user/15205825-ea5c-4bdc-94ae-b2f25e876c76/project/797cd96f-afab-4338-806d-5b0e2905733f.svg)](https://wakatime.com/badge/user/15205825-ea5c-4bdc-94ae-b2f25e876c76/project/797cd96f-afab-4338-806d-5b0e2905733f)
+
+![](https://www.mypi.one/webhook/5030d064-5a55-4dd8-9025-ac08e8fd7414/obsidian-todos-sort-plugin-readme)
